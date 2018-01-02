@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/authentication/form" method="post">
+    <table>
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>验证码:</td>
+            <td><input type="text" name="imageCode"><img src="/code/image"> </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input name="remember-me" type="checkbox" value="true">记住我</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="登陆"></td>
+        </tr>
+    </table>
+</form>
+
+
+
+<h3>短信登陆</h3>
+<form action="/authentication/mobile" method="post">
+    <table>
+        <tr>
+            <td>手机号:</td>
+            <td><input type="text" name="mobile"></td>
+        </tr>
+
+        <tr>
+            <td>短信验证码:</td>
+            <td><input type="text" name="smsCode"><a href="/code/sms?mobile=15620693097">获取验证码</a> </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="登陆"></td>
+        </tr>
+    </table>
+</form>
+
+
+<a href="/qqLogin/qq"><h3>QQ登陆</h3></a>
+</body>
+</html>

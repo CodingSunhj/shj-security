@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: 123456
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/security-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    dbcp2:
+      min-evictable-idle-time-millis: 180000
+      test-on-borrow: true
+      test-on-return: true
+      test-while-idle: true
+      validation-query: select 1
+    tomcat:
+      max-active: 100
+      min-idle: 10
+  jpa:
+    generate-ddl: true
+    show-sql: true
+
+  session:
+    store-type: none
+server:
+  session:
+    timeout: 600
+  port: 8060
+
+shj:
+  security:
+    browser:
+      loginType: REDIRECT
+      singInSuccessUrl: /manage.html
+      registerPage: /signUp.html
+
+
+
+
+
